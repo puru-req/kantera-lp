@@ -19,10 +19,16 @@ body {
 }
 .cta-form {
   margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .cta-form input {
   padding: 0.5rem;
-  width: 250px;
+  width: 100%;
 }
 .cta-form button {
   padding: 0.5rem 1rem;
@@ -36,18 +42,39 @@ body {
   gap: 2rem;
   padding: 2rem;
   background: #f8f8f8;
+  max-width: 1100px;
+  margin: auto;
 }
 .feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  gap: 1rem;
   background: #fff;
   padding: 1rem;
   border-radius: 8px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .features {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .feature {
+    flex-direction: row;
+    max-width: 32%;
+  }
+}
+.icon {
+  width: 100px;
 }
 .assessment {
   text-align: center;
   padding: 2rem;
 }
 .assessment img {
-  max-width: 90%;
+  max-width: 60%;
   border-radius: 8px;
 }
 .cta {
@@ -66,4 +93,7 @@ footer {
   background: #eee;
   text-align: center;
   padding: 1rem;
+}
+footer nav a {
+  margin: 0 0.5rem;
 }
